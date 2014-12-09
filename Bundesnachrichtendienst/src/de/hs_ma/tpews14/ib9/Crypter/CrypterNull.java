@@ -6,7 +6,7 @@ public class CrypterNull implements Crypter {
 
 	@Override
     public String encrypt(String message) throws CrypterException {
-	    // TODO Auto-generated method stub
+	    
 	    return message;
     }
 
