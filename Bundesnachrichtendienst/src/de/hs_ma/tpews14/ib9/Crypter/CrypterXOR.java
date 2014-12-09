@@ -2,7 +2,7 @@ package de.hs_ma.tpews14.ib9.Crypter;
 
 import java.util.LinkedList;
 
-public class XORVerschlusselung implements Crypter{
+public class CrypterXOR implements Crypter{
 
 	@Override
     public String encrypt(String message) throws CrypterException {

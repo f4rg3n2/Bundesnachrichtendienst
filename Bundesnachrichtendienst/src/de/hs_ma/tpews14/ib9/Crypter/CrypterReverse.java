@@ -2,7 +2,7 @@ package de.hs_ma.tpews14.ib9.Crypter;
 
 import java.util.LinkedList;
 
-public class Umkehrverschlusselung implements Crypter{
+public class CrypterReverse implements Crypter{
 
 	@Override
     public String encrypt(String message) throws CrypterException {
