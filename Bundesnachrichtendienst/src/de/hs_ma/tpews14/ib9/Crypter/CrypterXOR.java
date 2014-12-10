@@ -19,35 +19,33 @@ public class CrypterXOR implements Crypter {
 
 	@Override
 	public String encrypt(String message) throws CrypterException {
-		char[] k = key.toCharArray();
-		String msg = message.toUpperCase();// klappt
-		char[] a = msg.toCharArray();
-		String erg = "";
-		int tmp = 0;
-		int tmp2 = 0;
-		int tmp3=0;
-
-		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < klartextBuchstaben.length; j++) {
-				if (a[i] == klartextBuchstaben[j]) {
-					tmp = ++j;
-					
-				}
-			}
-	
-		}
+		message = message.toUpperCase();
+		int enderg = 0;
+		String verschl = " ";
+		char a[] = message.toCharArray();
+		char b[] = key.toCharArray(); 
+		int j=0;
 		
-		if (k.length-1 > tmp3){
-			for (int l = 0; l < klartextBuchstaben.length; l++) {
-				if (k[tmp3] == klartextBuchstaben[l]) {
-					tmp2 = ++l;
-					erg += schluesselBuchstaben[tmp ^ tmp2];
-				}
-				
+		for (int i = 0; i < a.length; i++) {
+	
+			//for (int j = 0; j < a.length; j++) {
+			if(i<b.length){
+					enderg = ((int)a[i]-64)^((int)b[i]-64);
+					verschl+=Character.toString((char) (enderg+64));
+				}else{
+					if (j<b.length){
+				enderg = ((int)a[i]-64)^((int)b[j]-64);
+				verschl+=Character.toString((char) (enderg+64));
+				++j;
+					}else{
+						j=0;
+						enderg = ((int)a[i]-64)^((int)b[j]-64);
+						verschl+=Character.toString((char) (enderg+64));
+						++j;
+					}
 			}
-			
 		}
-		return erg;
+		return verschl;
 
 	}
 
