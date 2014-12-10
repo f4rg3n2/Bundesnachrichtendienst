@@ -46,7 +46,6 @@ public class CrypterXOR implements Crypter {
 			}
 		}
 		return verschl;
-
 	}
 
 	@Override
