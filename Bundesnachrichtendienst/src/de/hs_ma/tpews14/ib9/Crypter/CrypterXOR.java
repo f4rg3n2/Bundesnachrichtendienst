@@ -21,7 +21,7 @@ public class CrypterXOR implements Crypter {
 	public String encrypt(String message) throws CrypterException {
 		message = message.toUpperCase();
 		int enderg = 0;
-		String verschl = " ";
+		String verschl = "";
 		char a[] = message.toCharArray();
 		char b[] = key.toCharArray(); 
 		int j=0;
@@ -63,15 +63,43 @@ public class CrypterXOR implements Crypter {
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
-		// TODO Auto-generated method stub
-		return null;
+		int enderg = 0;
+		String verschl = "";
+		char a[] = cypherText.toCharArray();
+		char b[] = key.toCharArray(); 
+		int j=0;
+		
+		for (int i = 0; i < a.length; i++) {
+	
+			//for (int j = 0; j < a.length; j++) {
+			if(i<b.length){
+					enderg = ((int)a[i]-64)^((int)b[i]-64);
+					verschl+=Character.toString((char) (enderg+64));
+				}else{
+					if (j<b.length){
+				enderg = ((int)a[i]-64)^((int)b[j]-64);
+				verschl+=Character.toString((char) (enderg+64));
+				++j;
+					}else{
+						j=0;
+						enderg = ((int)a[i]-64)^((int)b[j]-64);
+						verschl+=Character.toString((char) (enderg+64));
+						++j;
+					}
+			}
+		}
+		return verschl;
 	}
 
 	@Override
 	public LinkedList<String> decrypt(LinkedList<String> cypherTexte)
 	        throws CrypterException {
-		// TODO Auto-generated method stub
-		return null;
+		LinkedList<String> a = new LinkedList<>();
+		for (String message : cypherTexte) {
+			a.add(encrypt(message));
+		}
+
+		return a;
 	}
 
 }

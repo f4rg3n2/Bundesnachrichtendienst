@@ -19,8 +19,9 @@ public class JIUnit {
 //	    System.out.println(cs.decrypt("U"));
 //	    System.out.println(cs.decrypt(li));
 //	    System.out.println(1 ^ 7);
-	    CrypterXOR xor = new CrypterXOR("TA");
-	    System.out.println(xor.encrypt("AAAAAAAAAAAAAAAAAAAAAAAAaaaa"));
+//	    CrypterXOR xor = new CrypterXOR("TA");
+//	    System.out.println(xor.encrypt("AAAAAAAAAAAAAAAAAAAAAAAAaaaa"));
+//	    System.out.println(xor.decrypt("U@U@U@U@U@U@U@U@U@U@U@U@U@U@"));
 //	    System.out.println(xor.encrypt(li));
 //	   System.out.println(c.encrypt(l));
 //	   System.out.println(c.decrypt(li));

@@ -6,27 +6,34 @@ public class CrypterNull implements Crypter {
 
 	@Override
     public String encrypt(String message) throws CrypterException {
-	    
-	    return message;
+	    char a[] = message.toCharArray();
+	    String erg ="";
+	    for (int i = 0; i < a.length; i++) {
+	    	if (a[i] >= 65 && a[i] <= 90) {
+	    		erg+=a[i];
+	    	}
+	        
+        }
+	    return erg;
     }
 
 	@Override
     public LinkedList<String> encrypt(LinkedList<String> messages)
             throws CrypterException {
-	    // TODO Auto-generated method stub
+
 	    return messages;
     }
 
 	@Override
     public String decrypt(String cypherText) throws CrypterException {
-	    // TODO Auto-generated method stub
+
 	    return cypherText;
     }
 
 	@Override
     public LinkedList<String> decrypt(LinkedList<String> cypherTexte)
             throws CrypterException {
-	    // TODO Auto-generated method stub
+
 	    return cypherTexte;
     }
 
