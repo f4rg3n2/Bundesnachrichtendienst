@@ -7,9 +7,9 @@ public class CrypterCaesar implements Crypter {
 
 	public int key;
 
-	public CrypterCaesar(char key) { // noch nicht sicher ober es ein regulärer
+	public CrypterCaesar(String key) { // noch nicht sicher ober es ein regulärer
 									 // BUCHSTABE ist
-		this.key = key - 64;
+		this.key = key.charAt(0)-64;
 	}
 
 	@Override
