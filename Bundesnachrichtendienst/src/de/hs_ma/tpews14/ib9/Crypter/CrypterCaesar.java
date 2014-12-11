@@ -14,7 +14,7 @@ public class CrypterCaesar implements Crypter {
 
 	@Override
 	public String encrypt(String message) throws CrypterException {
-		
+		//bissl kürzer
 		message = message.replaceAll("[^a-zA-Z]", "").toUpperCase();
 		StringBuffer b = new StringBuffer(message);
 		for (int i = 0; i < b.length(); i++) {
