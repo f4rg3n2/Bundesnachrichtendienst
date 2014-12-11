@@ -6,15 +6,7 @@ public class CrypterNull implements Crypter {
 
 	@Override
     public String encrypt(String message) throws CrypterException {
-	    char a[] = message.toCharArray();
-	    String erg ="";
-	    for (int i = 0; i < a.length; i++) {
-	    	if (a[i] >= 65 && a[i] <= 90) {
-	    		erg+=a[i];
-	    	}
-	        
-        }
-	    return erg;
+	    return message = message.replaceAll("[^a-zA-Z]", "");
     }
 
 	@Override

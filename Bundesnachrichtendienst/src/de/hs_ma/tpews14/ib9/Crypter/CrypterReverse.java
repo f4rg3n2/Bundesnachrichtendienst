@@ -7,6 +7,9 @@ public class CrypterReverse implements Crypter {
 
 	@Override
 	public String encrypt(String message) throws CrypterException {
+		message = message.replaceAll("[^a-zA-Z]", "").toUpperCase();
+		StringBuffer b = new StringBuffer(message);
+		
 		String mes = message;
 		mes = message.toUpperCase();
 		char[] a = mes.toCharArray();
@@ -16,7 +19,7 @@ public class CrypterReverse implements Crypter {
 				erg += a[i];
 			}
 		}
-		return erg;
+		return b.reverse().toString();
 	}
 
 	@Override
@@ -31,16 +34,9 @@ public class CrypterReverse implements Crypter {
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
-		String mes = cypherText;
-		mes = cypherText.toUpperCase();
-		char[] a = mes.toCharArray();
-		String erg = "";
-		for (int i = a.length-1; i >= 0; i--) {
-			if (a[i] >= 65 && a[i] <= 90) {
-				erg += a[i];
-			}
-		}
-		return erg;
+		cypherText = cypherText.replaceAll("[^a-zA-Z]", "").toUpperCase();
+		StringBuffer b = new StringBuffer(cypherText);
+		return b.reverse().toString();
 		
 	}
 
