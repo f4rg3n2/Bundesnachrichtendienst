@@ -1,13 +1,13 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
-import java.util.LinkedList;
+
+import de.hs_ma.tpews14.ib9.Crypter.CrypterType;
 
 public class CrypterFactory {
-	public enum Verschluesselungen {
-		CAESAR, SUBSTITUTION, REVERSE, XOR, NULL
-	};
+	
+	
 
-	public static Crypter createCrypter(String key, Verschluesselungen v)
+	public static Crypter createCrypter(String key, CrypterType v)
 	        throws IllegalKeyException {
 		switch (v) {
 		case CAESAR:

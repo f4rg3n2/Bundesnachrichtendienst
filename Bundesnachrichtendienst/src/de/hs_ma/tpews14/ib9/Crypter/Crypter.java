@@ -1,6 +1,6 @@
 package de.hs_ma.tpews14.ib9.Crypter;
-import java.awt.List;
-import java.util.LinkedList;
+
+import java.util.List;
 
 
 	/**
@@ -40,7 +40,7 @@ import java.util.LinkedList;
 	* @throws CrypterException Wird geworfen, wenn Probleme mit der
 	* Verschl¨usselung auftreten.
 	*/
-	public LinkedList<String> encrypt(LinkedList<String> messages)
+	public List<String> encrypt(List<String> messages)
 	throws CrypterException;
 	/**
 	* Entschl¨usselt den gegebenen Text mit dem angegebenen Schl¨ussel.
@@ -62,7 +62,7 @@ import java.util.LinkedList;
 	* @throws CrypterException Wird geworfen, wenn Probleme mit der
 	* Verschl¨usselung auftreten.
 	*/
-	public LinkedList<String> decrypt(LinkedList<String> cypherTexte)
+	public List<String> decrypt(List<String> cypherTexte)
 	throws CrypterException;
 
 }

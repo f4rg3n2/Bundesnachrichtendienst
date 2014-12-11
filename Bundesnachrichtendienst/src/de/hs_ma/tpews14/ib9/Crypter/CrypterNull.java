@@ -1,6 +1,6 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
-import java.util.LinkedList;
+import java.util.List;
 
 public class CrypterNull implements Crypter {
 
@@ -18,7 +18,7 @@ public class CrypterNull implements Crypter {
     }
 
 	@Override
-    public LinkedList<String> encrypt(LinkedList<String> messages)
+    public List<String> encrypt(List<String> messages)
             throws CrypterException {
 
 	    return messages;
@@ -31,7 +31,7 @@ public class CrypterNull implements Crypter {
     }
 
 	@Override
-    public LinkedList<String> decrypt(LinkedList<String> cypherTexte)
+    public List<String> decrypt(List<String> cypherTexte)
             throws CrypterException {
 
 	    return cypherTexte;
