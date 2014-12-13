@@ -25,10 +25,10 @@ public class JIUnit {
 //	    System.out.println(xor.decrypt("U@U@U@U@U@U@U@U@U@U@U@U@U@U@"));
 //	    System.out.println(xor.encrypt(li));
 //	    System.out.println(c.key);
-//	   System.out.println(c.encrypt(l));
-//	   System.out.println(c.decrypt(li));
-	   System.out.println(c.encrypt("GiRaFFeZ"));
-//	   System.out.println(c.decrypt("JLUDIIHC"));
+	   System.out.println(c.encrypt(l));
+	   System.out.println(c.decrypt(li));
+	   System.out.println(c.encrypt("Gi RaF  FeZ"));
+	   System.out.println(c.decrypt("JLUDIIHC"));
 //	    System.out.println(cr.encrypt("ABCDEFGHIJK"));
 //	    System.out.println(cr.encrypt(li));
 //	    System.out.println(cr.decrypt("KJIHGFEDCBA"));

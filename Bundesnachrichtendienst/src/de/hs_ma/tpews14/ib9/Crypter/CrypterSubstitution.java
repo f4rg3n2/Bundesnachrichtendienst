@@ -16,8 +16,8 @@ public class CrypterSubstitution extends CrypterSuper {
 
 	@Override
 	public String encrypt(String message) throws CrypterException {
-		String tmp = message.toUpperCase();// klappt
-		char[] a = tmp.toCharArray();
+		crypterHelp(message);
+		char[] a = message.toCharArray();
 		String erg= "";
 		
 		for (int i =0; i<a.length;i++) {
@@ -43,8 +43,7 @@ public class CrypterSubstitution extends CrypterSuper {
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
-		String tmp = cypherText.toUpperCase();// klappt
-		char[] a = tmp.toCharArray();
+		char[] a = cypherText.toCharArray();
 		String erg= "";
 		
 		for (int i =0; i<a.length;i++) {

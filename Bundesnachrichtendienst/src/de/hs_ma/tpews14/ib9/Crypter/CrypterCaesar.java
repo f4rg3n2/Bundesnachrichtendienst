@@ -11,17 +11,13 @@ public class CrypterCaesar extends CrypterSuper {
 	@Override
 	public String encrypt(String message) throws CrypterException {
 		crypterHelp(message);
-		char[] a = message.toCharArray();
-		String erg = "";
-		for (int i = 0; i < a.length; i++) {
-			if (a[i] + key > 90) {
-				erg += Character.toString((char) (a[i] + key - 90 + 64));
-			} else {
-				erg += Character.toString((char) (a[i] + key));
-			}
+		StringBuffer b = new StringBuffer(message);
+		for (int i = 0; i < b.length(); i++) {
+			b.setCharAt(i,
+					(b.charAt(i) + key < 'Z') ? ((char) (b.charAt(i) + key))
+							: (char) (b.charAt(i) + key + 64 - 90));
 		}
-
-		return erg;
+		return b.toString();
 	}
 
 	// @Override
@@ -37,17 +33,13 @@ public class CrypterCaesar extends CrypterSuper {
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
-		String tmp = cypherText.toUpperCase();
-		char[] a = tmp.toCharArray();
-		String erg = "";
-		for (int i = 0; i < a.length; i++) {
-			if (a[i] - key < 65) {
-				erg += Character.toString((char) (a[i] - key + 90 - 64));
-			} else {
-				erg += Character.toString((char) (a[i] - key));
-			}
+		crypterHelp(cypherText);
+		StringBuffer b = new StringBuffer(cypherText);
+		for (int i = 0; i < b.length(); i++) {
+			b.setCharAt(i, (b.charAt(i) - key < 'A') ? ((char) (b.charAt(i)
+					- key - 64 + 90)) : ((char) (b.charAt(i) - key)));
 		}
-		return erg;
+		return b.toString();
 	}
 
 	// @Override

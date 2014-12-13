@@ -7,14 +7,11 @@ public class CrypterReverse extends CrypterSuper {
 
 	@Override
 	public String encrypt(String message) throws CrypterException {
-		String mes = message;
-		mes = message.toUpperCase();
-		char[] a = mes.toCharArray();
+		crypterHelp(message);
+		char[] a = message.toCharArray();
 		String erg = "";
 		for (int i = a.length-1; i >= 0; i--) {
-			if (a[i] >= 65 && a[i] <= 90) {
 				erg += a[i];
-			}
 		}
 		return erg;
 	}
@@ -31,14 +28,10 @@ public class CrypterReverse extends CrypterSuper {
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
-		String mes = cypherText;
-		mes = cypherText.toUpperCase();
-		char[] a = mes.toCharArray();
+		char[] a = cypherText.toCharArray();
 		String erg = "";
 		for (int i = a.length-1; i >= 0; i--) {
-			if (a[i] >= 65 && a[i] <= 90) {
 				erg += a[i];
-			}
 		}
 		return erg;
 		

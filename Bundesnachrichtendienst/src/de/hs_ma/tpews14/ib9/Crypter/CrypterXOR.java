@@ -20,7 +20,7 @@ public class CrypterXOR extends CrypterSuper {
 
 	@Override
 	public String encrypt(String message) throws CrypterException {
-		message = message.toUpperCase();
+		crypterHelp(message);
 		int enderg = 0;
 		String verschl = "";
 		char a[] = message.toCharArray();
