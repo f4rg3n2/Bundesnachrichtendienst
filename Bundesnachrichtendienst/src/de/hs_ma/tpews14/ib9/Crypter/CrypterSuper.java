@@ -34,8 +34,9 @@ public abstract class CrypterSuper implements Crypter {
 	}
 	
 	public String crypterHelp(String message){
-		 message = message.replaceAll("[^a-zA-Z]", "").toUpperCase();
-		return message;
+		String mes;
+		mes = message.replaceAll("[^a-zA-Z]", "").toUpperCase();
+		return mes;
 	}
 
 }
