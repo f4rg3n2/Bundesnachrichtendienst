@@ -10,47 +10,35 @@ public class CrypterCaesar extends CrypterSuper {
 
 	@Override
 	public String encrypt(String message) throws CrypterException {
-		crypterHelp(message);
-		StringBuffer b = new StringBuffer(message);
-		for (int i = 0; i < b.length(); i++) {
-			b.setCharAt(i,
-					(b.charAt(i) + key < 'Z') ? ((char) (b.charAt(i) + key))
-							: (char) (b.charAt(i) + key + 64 - 90));
-		}
-		return b.toString();
+		char[] a = crypterHelp(message).toCharArray();
+		String erg = "";
+		for (int i = 0; i < a.length; i++) {
+			
+				if (a[i] + key > 90) {
+					erg += Character.toString((char) (a[i] + key - 90 + 64));
+				} else {
+					erg += Character.toString((char) (a[i] + key));
+				}
+			}
+		return erg;
 	}
 
-	// @Override
-	// public List<String> encrypt(List<String> messages)
-	// throws CrypterException {
-	// LinkedList<String> a = new LinkedList<>();
-	// for (String message : messages) {
-	// a.add(encrypt(message));
-	// }
-	//
-	// return a;
-	// }
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
-		crypterHelp(cypherText);
-		StringBuffer b = new StringBuffer(cypherText);
-		for (int i = 0; i < b.length(); i++) {
-			b.setCharAt(i, (b.charAt(i) - key < 'A') ? ((char) (b.charAt(i)
-					- key - 64 + 90)) : ((char) (b.charAt(i) - key)));
+		char[] a = cypherText.toCharArray();
+		String erg = "";
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] >= 65 && a[i] <= 90) {
+				if (a[i] - key < 65) {
+					erg += Character.toString((char) (a[i] - key + 90 - 64));
+				} else {
+					erg += Character.toString((char) (a[i] - key));
+				}
+			}
 		}
-		return b.toString();
+		return erg;
 	}
 
-	// @Override
-	// public List<String> decrypt(List<String> cypherTexte)
-	// throws CrypterException {
-	// LinkedList<String> a = new LinkedList<>();
-	// for (String message : cypherTexte) {
-	// a.add(decrypt(message));
-	// }
-	//
-	// return a;
-	// }
-
+	
 }

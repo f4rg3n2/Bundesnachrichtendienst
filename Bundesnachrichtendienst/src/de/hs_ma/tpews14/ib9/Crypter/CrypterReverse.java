@@ -1,7 +1,5 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
-import java.util.LinkedList;
-import java.util.List;
 
 public class CrypterReverse extends CrypterSuper {
 
