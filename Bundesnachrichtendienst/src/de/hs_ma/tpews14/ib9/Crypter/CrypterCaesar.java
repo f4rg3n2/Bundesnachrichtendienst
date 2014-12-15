@@ -13,7 +13,6 @@ public class CrypterCaesar extends CrypterSuper {
 		char[] a = crypterHelp(message).toCharArray();
 		String erg = "";
 		for (int i = 0; i < a.length; i++) {
-			
 				if (a[i] + key > 90) {
 					erg += Character.toString((char) (a[i] + key - 90 + 64));
 				} else {
@@ -29,14 +28,12 @@ public class CrypterCaesar extends CrypterSuper {
 		char[] a = cypherText.toCharArray();
 		String erg = "";
 		for (int i = 0; i < a.length; i++) {
-			if (a[i] >= 65 && a[i] <= 90) {
 				if (a[i] - key < 65) {
 					erg += Character.toString((char) (a[i] - key + 90 - 64));
 				} else {
 					erg += Character.toString((char) (a[i] - key));
 				}
 			}
-		}
 		return erg;
 	}
 

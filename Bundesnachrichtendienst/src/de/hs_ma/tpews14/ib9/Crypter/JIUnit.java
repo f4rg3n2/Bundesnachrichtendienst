@@ -12,7 +12,7 @@ public class JIUnit {
 	    LinkedList<String> li = new LinkedList<>(); 
 	    li.add("DEDDD");
 	    li.add("EEEE");
-	    CrypterSubstitution cs = new CrypterSubstitution();
+	    CrypterSubstitution cs = new CrypterSubstitution("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 	    CrypterReverse cr = new CrypterReverse();
 
 	    System.out.println(cs.encrypt("a!"));
