@@ -1,5 +1,7 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
+import java.util.regex.Pattern;
+
 import de.hs_ma.tpews14.ib9.Crypter.CrypterType;
 
 public class CrypterFactory {
@@ -14,7 +16,7 @@ public class CrypterFactory {
 			return new CrypterCaesar(key);
 
 		case SUBSTITUTION:
-			if (key.length() == 26 || key.matches("([A-Z])")) {
+			if (key.length() == 26 && key.matches("[A-Z]*")) {
 				return new CrypterSubstitution(key);
 			} else {
 				throw new IllegalKeyException();
@@ -23,9 +25,8 @@ public class CrypterFactory {
 			return new CrypterReverse();
 
 		case XOR:
-			if (key.matches("[^A-Z]")) {
+			if (!key.matches("[A-Z]*")) {
 				throw new IllegalKeyException();
-				
 			} 
 			return new CrypterXOR(key);
 
