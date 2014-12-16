@@ -3,6 +3,8 @@ package de.hs_ma.tpews14.ib9.Crypter;
 import java.util.LinkedList;
 import java.util.List;
 
+import de.hs_ma.tpews14.ib9.Exception.CrypterException;
+
 /**
  * CrypterSuper ist eine SuperKlasse, die den anderen Verschluesselungsklassen
  * helfen soll, nichterlaubten Eingaben zu entfernen.

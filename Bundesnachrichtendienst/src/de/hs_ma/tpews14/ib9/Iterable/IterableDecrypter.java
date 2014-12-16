@@ -1,7 +1,10 @@
-package de.hs_ma.tpews14.ib9.Crypter;
+package de.hs_ma.tpews14.ib9.Iterable;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+
+import de.hs_ma.tpews14.ib9.Crypter.Crypter;
+import de.hs_ma.tpews14.ib9.Exception.CrypterException;
 
 public class IterableDecrypter implements Iterable<String> {
 

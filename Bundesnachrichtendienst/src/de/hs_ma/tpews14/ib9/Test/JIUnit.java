@@ -1,6 +1,12 @@
-package de.hs_ma.tpews14.ib9.Crypter;
+package de.hs_ma.tpews14.ib9.Test;
 
 import java.util.LinkedList;
+
+import de.hs_ma.tpews14.ib9.Crypter.CrypterCaesar;
+import de.hs_ma.tpews14.ib9.Crypter.CrypterReverse;
+import de.hs_ma.tpews14.ib9.Crypter.CrypterSubstitution;
+import de.hs_ma.tpews14.ib9.Crypter.CrypterXOR;
+import de.hs_ma.tpews14.ib9.Exception.CrypterException;
 
 public class JIUnit {
 
