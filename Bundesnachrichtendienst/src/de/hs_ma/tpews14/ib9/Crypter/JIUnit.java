@@ -1,8 +1,6 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
-import static org.junit.Assert.*;
-
-import java.util.LinkedList;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
