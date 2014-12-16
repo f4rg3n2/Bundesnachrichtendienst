@@ -1,11 +1,18 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
-import java.util.regex.Pattern;
-
-import de.hs_ma.tpews14.ib9.Crypter.CrypterType;
 
 public class CrypterFactory {
 
+	/**
+	 * Verwaltet die einzelnen Ver- und Entschluesselungsarten, 
+	 * durch einen switch-Case und gibt eine Fehlermeldung aus,
+	 * wenn ein falscher Schluessel eingegeben wurde.
+	 * 
+	 * @param key
+	 * @param v
+	 * @return
+	 * @throws IllegalKeyException
+	 */
 	public static Crypter createCrypter(String key, CrypterType v)
 	        throws IllegalKeyException {
 		switch (v) {

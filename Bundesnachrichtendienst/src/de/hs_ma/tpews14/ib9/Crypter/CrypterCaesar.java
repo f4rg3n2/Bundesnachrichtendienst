@@ -4,6 +4,11 @@ public class CrypterCaesar extends CrypterSuper {
 
 	public int key;
 
+	/**
+	 * Initialisiert einen Schluessel.
+	 * 
+	 * @param key
+	 */
 	public CrypterCaesar(String key) {
 		this.key = key.charAt(0) - 64;
 	}

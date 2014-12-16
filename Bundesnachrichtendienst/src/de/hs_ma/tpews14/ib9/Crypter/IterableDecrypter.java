@@ -10,6 +10,13 @@ public class IterableDecrypter implements Iterable<String> {
 	IterableCrypter iterableCrypter;
 	LinkedList<String> liste2 = new LinkedList<>();
 
+	/**
+	 * Initialisiert eine Liste und eine Entschluesselungsart,
+	 * wie die uebergebene Liste entschluesselt werden soll.
+	 * 
+	 * @param liste
+	 * @param entschluesselungsart
+	 */
 	public IterableDecrypter(Iterable<String> liste,
 	        Crypter entschluesselungsart) {
 		this.liste1 = liste;

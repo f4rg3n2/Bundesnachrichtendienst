@@ -5,13 +5,12 @@ public class CrypterXOR extends CrypterSuper {
 
 	
 	private String key;
-	private char[] klartextBuchstaben = { 'A', 'B', 'C', 'D', 'E', 'F', 'G',
-	        'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-	        'U', 'V', 'W', 'X', 'Y', 'Z' };
-	private char[] schluesselBuchstaben = { '@', 'A', 'B', 'C', 'D', 'E', 'F',
-	        'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
-	        'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '/', ']', '^', '_' };
 
+	/**
+	 * Initialisiert den Schluessel.
+	 * 
+	 * @param key
+	 */
 	public CrypterXOR(String key) {
 		this.key = key;
 	}
