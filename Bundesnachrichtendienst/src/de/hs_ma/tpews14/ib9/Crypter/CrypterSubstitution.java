@@ -1,13 +1,19 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
+import de.hs_ma.tpews14.ib9.Exception.CrypterException;
+
 
 public class CrypterSubstitution extends CrypterSuper {
 
 	private char[] klartextBuchstaben = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
-//	private char[] schluesselBuchstaben = {'U','F','L','P','W','D','R','A','S','J','N','C','O','N','Q','Y','B','V','T','E','X','H','Z','K','G','I'};
 	private String key;
 	
 
+	/**
+	 * Initialisiert einen Schluessel.
+	 * 
+	 * @param key
+	 */
 	public CrypterSubstitution(String key) {
 		this.key = key;
 	}
@@ -44,7 +50,7 @@ public class CrypterSubstitution extends CrypterSuper {
         }
 		return erg;
 	}else{
-		throw new CrypterException();
+		throw new CrypterException("Substitution hat einen Fehler bei der Entschluesselung.");
 	}
 	}
 }

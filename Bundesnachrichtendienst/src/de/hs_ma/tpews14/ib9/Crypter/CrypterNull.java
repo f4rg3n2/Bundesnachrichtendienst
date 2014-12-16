@@ -2,6 +2,8 @@ package de.hs_ma.tpews14.ib9.Crypter;
 
 import java.util.List;
 
+import de.hs_ma.tpews14.ib9.Exception.CrypterException;
+
 public class CrypterNull extends CrypterSuper {
 
 	@Override

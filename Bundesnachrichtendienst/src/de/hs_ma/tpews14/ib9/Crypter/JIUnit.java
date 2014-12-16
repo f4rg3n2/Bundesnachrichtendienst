@@ -6,6 +6,8 @@ import java.util.LinkedList;
 
 import org.junit.Test;
 
+import de.hs_ma.tpews14.ib9.Exception.CrypterException;
+
 public class JIUnit {
 
 	@Test

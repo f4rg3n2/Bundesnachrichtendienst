@@ -1,5 +1,7 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
+import de.hs_ma.tpews14.ib9.Exception.CrypterException;
+
 public class CrypterReverse extends CrypterSuper {
 
 	@Override
@@ -13,7 +15,7 @@ public class CrypterReverse extends CrypterSuper {
 		if (cypherText.matches("[A-Z]*")) {
 		return encrypt(cypherText);
 		}else{
-			throw new CrypterException();
+			throw new CrypterException("Reverse hat einen Fehler bei der Entschluesselung.");
 		}
 	}
 }

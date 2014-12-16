@@ -1,9 +1,16 @@
 package de.hs_ma.tpews14.ib9.Crypter;
 
+import de.hs_ma.tpews14.ib9.Exception.CrypterException;
+
 public class CrypterCaesar extends CrypterSuper {
 
 	public int key;
 
+	/**
+	 * Initialisiert einen Schluessel.
+	 * 
+	 * @param key
+	 */
 	public CrypterCaesar(String key) {
 		this.key = key.charAt(0) - 64;
 	}
