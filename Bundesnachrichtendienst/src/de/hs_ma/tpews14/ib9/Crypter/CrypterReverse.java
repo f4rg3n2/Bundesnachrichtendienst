@@ -13,7 +13,7 @@ public class CrypterReverse extends CrypterSuper {
 		if (cypherText.matches("[A-Z]*")) {
 		return encrypt(cypherText);
 		}else{
-			throw new CrypterException();
+			throw new CrypterException("Reverse hat einen Fehler bei der Entschluesselung.");
 		}
 	}
 }

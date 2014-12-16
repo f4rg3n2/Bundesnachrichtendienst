@@ -44,7 +44,7 @@ public class CrypterSubstitution extends CrypterSuper {
         }
 		return erg;
 	}else{
-		throw new CrypterException();
+		throw new CrypterException("Substitution hat einen Fehler bei der Entschluesselung.");
 	}
 	}
 }
