@@ -8,8 +8,8 @@ public class CrypterNull extends CrypterSuper {
 
 	@Override
     public String encrypt(String message) throws CrypterException {
-	    crypterHelp(message);
-	    return message;
+	   
+	    return crypterHelp(message);
     }
 
 	@Override
@@ -21,8 +21,11 @@ public class CrypterNull extends CrypterSuper {
 
 	@Override
     public String decrypt(String cypherText) throws CrypterException {
-
+		if (cypherText.matches("[A-Z]*")) {
 	    return cypherText;
+		}else{
+			throw new CrypterException("NullCrypter hat einen fehler beim Entschluesseln.");
+		}
     }
 
 	@Override

@@ -49,6 +49,7 @@ public class CrypterXOR extends CrypterSuper {
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
+	
 		int enderg = 0;
 		String verschl = "";
 		char a[] = cypherText.toCharArray();
@@ -73,5 +74,6 @@ public class CrypterXOR extends CrypterSuper {
 			}
 		}
 		return verschl;
+	
 	}
 }
