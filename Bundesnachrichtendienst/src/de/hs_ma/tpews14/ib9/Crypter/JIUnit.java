@@ -8,6 +8,9 @@ import java.util.LinkedList;
 
 import org.junit.Test;
 
+import de.hs_ma.tpews14.ib9.Crypter.Crypter;
+import de.hs_ma.tpews14.ib9.Crypter.CrypterFactory;
+import de.hs_ma.tpews14.ib9.Crypter.CrypterType;
 import de.hs_ma.tpews14.ib9.Exception.CrypterException;
 import de.hs_ma.tpews14.ib9.Exception.IllegalKeyException;
 
