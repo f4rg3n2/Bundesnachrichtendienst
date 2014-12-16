@@ -36,7 +36,7 @@ public class CrypterCaesar extends CrypterSuper {
 			}
 			return erg;
 		} else {
-			throw new CrypterException("Caesar hat einen Fehler beim Entschlüsseln.");
+			throw new CrypterException("Caesar hat einen Fehler beim Entschluesseln.");
 		}
 
 	}

@@ -30,6 +30,7 @@ public class CrypterSubstitution extends CrypterSuper {
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
+		if (cypherText.matches("[A-Z]*")) {
 		char[] schluesselBuchstaben = key.toCharArray();
 		char[] a = cypherText.toCharArray();
 		String erg= "";
@@ -42,5 +43,8 @@ public class CrypterSubstitution extends CrypterSuper {
             }
         }
 		return erg;
+	}else{
+		throw new CrypterException();
+	}
 	}
 }

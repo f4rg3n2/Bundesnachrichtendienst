@@ -10,6 +10,10 @@ public class CrypterReverse extends CrypterSuper {
 
 	@Override
 	public String decrypt(String cypherText) throws CrypterException {
+		if (cypherText.matches("[A-Z]*")) {
 		return encrypt(cypherText);
+		}else{
+			throw new CrypterException();
+		}
 	}
 }
