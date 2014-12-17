@@ -4,7 +4,7 @@ import java.util.List;
 
 import de.hs_ma.tpews14.ib9.Exception.CrypterException;
 
-public class CrypterNull extends CrypterSuper {
+class CrypterNull extends CrypterSuper {
 
 	@Override
     public String encrypt(String message) throws CrypterException {

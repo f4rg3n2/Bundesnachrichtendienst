@@ -16,7 +16,7 @@ public class CrypterFactory {
 	 * @return
 	 * @throws IllegalKeyException
 	 */
-	public static Crypter createCrypter(String key, CrypterType v)
+	 public static Crypter createCrypter(String key, CrypterType v)
 	        throws IllegalKeyException {
 		switch (v) {
 		case CAESAR:

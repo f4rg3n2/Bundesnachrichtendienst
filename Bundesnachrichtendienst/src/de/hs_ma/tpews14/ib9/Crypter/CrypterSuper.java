@@ -11,7 +11,7 @@ import de.hs_ma.tpews14.ib9.Exception.CrypterException;
  * Auﬂerdem vermeiden wir durch diese Klasse Codedoppelung. 
  *
  */
-public abstract class CrypterSuper implements Crypter {
+abstract class CrypterSuper implements Crypter {
 
 	@Override
 	public abstract String encrypt(String message) throws CrypterException;
@@ -48,7 +48,7 @@ public abstract class CrypterSuper implements Crypter {
 	 * @return die Nachricht nur in groﬂ Buchstaben und
 	 *  ohne Nichterlaubte Buchstaben
 	 */
-	public String crypterHelp(String message){
+	 String crypterHelp(String message){
 		String mes;
 		mes = message.replaceAll("[^a-zA-Z]", "").toUpperCase();
 		return mes;

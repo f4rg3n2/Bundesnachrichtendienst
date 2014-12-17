@@ -3,7 +3,7 @@ package de.hs_ma.tpews14.ib9.Crypter;
 import de.hs_ma.tpews14.ib9.Exception.CrypterException;
 
 
-public class CrypterSubstitution extends CrypterSuper {
+class CrypterSubstitution extends CrypterSuper {
 
 	private char[] klartextBuchstaben = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 	private String key;
