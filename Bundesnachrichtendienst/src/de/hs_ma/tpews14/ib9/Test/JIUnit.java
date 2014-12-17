@@ -18,7 +18,7 @@ public class JIUnit {
 
 	@Test
 	public void test() throws CrypterException {
-
+		
 		Crypter caesar = CrypterFactory.createCrypter("A", CrypterType.CAESAR);
 		assertEquals(caesar.encrypt("hallo§$%&/()"), "IBMMP");
 		assertEquals(caesar.decrypt("IBMMP"), "HALLO");
@@ -116,6 +116,7 @@ public class JIUnit {
 				"QWERTZUIOPASDFGHJKLYXCVBNM", CrypterType.SUBSTITUTION);
 		Crypter reverse = CrypterFactory.createCrypter("", CrypterType.REVERSE);
 		Crypter nullc = CrypterFactory.createCrypter("", CrypterType.NULL);
+		Crypter xor = CrypterFactory.createCrypter("TPERULES", CrypterType.XOR);
 
 		try {
 			caesar.decrypt("ABCD@DOF");
@@ -125,19 +126,25 @@ public class JIUnit {
 		}
 
 		try {
-			subst.decrypt("ABCD@?§OF");
+			subst.decrypt("AB123CD@45OF");
 			fail();
 		} catch (CrypterException ce) {
 			assertTrue(true);
 		}
 		try {
-			reverse.decrypt("AB?D@DO");
+			reverse.decrypt("ABD34567D234O");
 			fail();
 		} catch (CrypterException ce) {
 			assertTrue(true);
 		}
 		try {
-			nullc.decrypt("5BCD@DOF");
+			nullc.decrypt("B2C2D@678D3O4F");
+		fail();
+		} catch (CrypterException ce) {
+			assertTrue(true);
+		}
+		try {
+			xor.decrypt("AD5WA1DS243LKFLGFOL");
 			fail();
 		} catch (CrypterException ce) {
 			assertTrue(true);
